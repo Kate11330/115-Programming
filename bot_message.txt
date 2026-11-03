@@ -1,0 +1,35 @@
+使用者：在 @gamebot/blitzbot.ipynb 新增一個code cell，完成底下的程式。basex 以及 basey是左上角寶石中心點的位置。畫面中有8x8顆寶石。每顆寶石的間距指在GAP中。寫一個函式，接受一個row (用r代表) ,一個column (用c代表)，回傳(r,c) 所代表的寶石位置
+
+助理：已在 `gamebot/blitzbot.ipynb` 新增 `gem_position(r, c)` 程式碼 cell。`r`、`c` 從 0 開始，函式回傳寶石中心點的 `(x, y)` 座標。
+
+使用者：在 @gamebot/blitzbot.ipynb   新增一個code cell，完成底下的程式。basex 以及 basey是左上角寶石中心點的位置。畫面中有8x8顆寶石。每顆寶石的間距指在GAP中。寫一個函式，接受一個row (用r代表) ,一個column (用c代表)，回傳(r,c) 所代表的寶石位置
+
+助理：`gamebot/blitzbot.ipynb` 已有 `gem_position(r, c)` 程式碼 cell，會依照從 0 開始的列、欄索引回傳寶石中心點 `(x, y)`：`(basex + c * gap, basey + r * gap)`。
+
+使用者：在 @gamebot/blitzbot.ipynb 中新增一個code cell，完成底下的程式。basex 以及 basey是左上角寶石中心點的位置。畫面中有8x8顆寶石。每顆寶石的間距指在GAP中。寫一個函式，接收一個row (用r代表) ,一個column (用c代表)，回傳(r,c) 所代表的寶石位置
+
+助理：`gamebot/blitzbot.ipynb` 已新增 `gem_position(r, c)` 程式碼 cell。它回傳寶石中心點的 `(x, y)` 座標，並以 0 起算列、欄索引：`(basex + c * gap, basey + r * gap)`。
+
+使用者：在 @gamebot/blitzbot.ipynb 中新增一個code cell，完成底下的函式。函式名稱為 get_gem_color，接收一個 r 以及 c，還有畫面的截圖im.使用 pyautogui取得(r,c)寶石的位置，並回傳。
+
+助理：已在 `gamebot/blitzbot.ipynb` 新增 `get_gem_color(r, c, im)` cell。函式透過 `gem_position(r, c)` 取得寶石座標，再從截圖 `im` 讀取並回傳該位置的顏色。
+
+使用者：在 @gamebot/blitzbot.ipynb 中新增一個code celll，完成can_move_left函式。can_move_left接收 r,c以及im.需求如下：我正在寫一個match3的game.bot.畫面中有8x8顆寶石。每顆寶石有4個可移動的方向。往上、下、左、右。請判斷(r,c)可否往左移動，若可以，回傳True，否則回傳False。im.是螢幕截圖，可以取得寶石的中心點的color
+
+助理：已在 `gamebot/blitzbot.ipynb` 新增 `can_move_left(r, c, im)` cell。函式會檢查左側是否有相鄰寶石，並判斷與左側寶石交換後是否會形成水平或垂直的三連線；符合時回傳 `True`，否則回傳 `False`。
+
+使用者：在 @gamebot/blitzbot.ipynb 中新增一個code celll，完成can_move_left函式。can_move_left接收r,c以及im.需求如下：我正在寫一個match 3的game bot，畫面中有8x8顆寶石。每顆寶石有4個可移動的方向。往上、下、左、右。請判斷(r,c)可否往左移動，若可以，回傳True，否則回傳False。im.是螢幕截圖，可以取得寶石的中心點的color
+
+助理：`gamebot/blitzbot.ipynb` 已有 `can_move_left(r, c, im)` 程式碼 cell。函式會先排除最左欄，再判斷與左側寶石交換後，是否會在交換位置形成水平或垂直三連線。
+
+使用者：依照can_move_left的規格，完成can_move_can_right、can_move_up、can_move_down
+
+使用者：依照can_move_left的規格，完成can_move_right、can_move_up、can_move_down
+
+助理：已在 `gamebot/blitzbot.ipynb` 新增 `can_move_right(r, c, im)`、`can_move_up(r, c, im)` 和 `can_move_down(r, c, im)`。三個函式會檢查交換後是否形成三連線，並在超出棋盤邊界時回傳 `False`。
+
+使用者：在 @gamebot/blitzbot.ipynb 中新增一個code cell，完成底下工作。先存下目前時間。螢幕截圖。進入無窮迴圈。對於畫面中的每顆寶石，判斷是否can_move_left、can_move_right、can_move_up、can_move_down。若其中一個可以，就將寶石(r,c)移到對應方向。再截圖。若超過一分鐘，跳出無窮迴圈。
+
+使用者：在 @gamebot/blitzbot.ipynb 中新增一個code cell，完成底下工作。先存下目前時間。螢幕截圖。進入無窮迴圈。對於畫面中的每顆寶石，判斷是否can_move_left、can_move_right、can_move_up、can_move_down。若其中一個可以，就將寶石(r,c)移到對應方向。再截圖。若超過一分鐘，跳出無窮迴圈。Your
+
+使用者：請把目前為止，我與你溝通的所有訊息存成一個bot_message.txt
